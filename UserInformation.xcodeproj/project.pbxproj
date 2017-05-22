@@ -17,6 +17,7 @@
 		E81D9F2E1ECEBC490029D8E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E81D9F2C1ECEBC490029D8E9 /* LaunchScreen.storyboard */; };
 		E81D9F391ECEBC490029D8E9 /* UserInformationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D9F381ECEBC490029D8E9 /* UserInformationTests.swift */; };
 		E81D9F441ECEBC490029D8E9 /* UserInformationUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E81D9F431ECEBC490029D8E9 /* UserInformationUITests.swift */; };
+		E848DE5C1ED2ADD000C16CF9 /* ViewControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E848DE5B1ED2ADD000C16CF9 /* ViewControllerTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		E81D9F3F1ECEBC490029D8E9 /* UserInformationUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UserInformationUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E81D9F431ECEBC490029D8E9 /* UserInformationUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInformationUITests.swift; sourceTree = "<group>"; };
 		E81D9F451ECEBC490029D8E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E848DE5B1ED2ADD000C16CF9 /* ViewControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -139,6 +141,7 @@
 			children = (
 				E81D9F381ECEBC490029D8E9 /* UserInformationTests.swift */,
 				E81D9F3A1ECEBC490029D8E9 /* Info.plist */,
+				E848DE5B1ED2ADD000C16CF9 /* ViewControllerTests.swift */,
 			);
 			path = UserInformationTests;
 			sourceTree = "<group>";
@@ -456,6 +459,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E848DE5C1ED2ADD000C16CF9 /* ViewControllerTests.swift in Sources */,
 				E81D9F391ECEBC490029D8E9 /* UserInformationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

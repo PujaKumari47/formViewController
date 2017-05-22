@@ -144,34 +144,34 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
         self.weightPickerView.removeFromSuperview()
         //self.toolBar.removeFromSuperview()
     }
-    func nextPicker(sender:UIBarButtonItem) {
-        if (firstNameTextField.superview?.viewWithTag(firstNameTextField.tag + 1) as? UITextField) != nil {
-            
-            lastNameTextField.becomeFirstResponder()
-            
-        } else {
-            
-            firstNameTextField.resignFirstResponder()
-            
-        }
-        
-
-        //self.toolBar.removeFromSuperview()
-    }
-    func previousPicker(sender:UIBarButtonItem) {
-        if (firstNameTextField.superview?.viewWithTag(firstNameTextField.tag + 1) as? UITextField) != nil {
-            
-           lastNameTextField.becomeFirstResponder()
-            
-        } else {
-            
-            firstNameTextField.resignFirstResponder()
-           
-            
-        }
-     
-    }
-    
+//    func nextPicker(sender:UIBarButtonItem) {
+//        if (firstNameTextField.superview?.viewWithTag(firstNameTextField.tag + 1) as? UITextField) != nil {
+//            
+//            lastNameTextField.becomeFirstResponder()
+//            
+//        } else {
+//            
+//            firstNameTextField.resignFirstResponder()
+//            
+//        }
+//        
+//
+//        //self.toolBar.removeFromSuperview()
+//    }
+//    func previousPicker(sender:UIBarButtonItem) {
+//        if (firstNameTextField.superview?.viewWithTag(firstNameTextField.tag + 1) as? UITextField) != nil {
+//            
+//           lastNameTextField.becomeFirstResponder()
+//            
+//        } else {
+//            
+//            firstNameTextField.resignFirstResponder()
+//           
+//            
+//        }
+//     
+//    }
+//    
     
     
     func datePickerValueChanged(sender:UIDatePicker) {
@@ -182,16 +182,7 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
         
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if let nextField = textField.superview?.viewWithTag(textField.tag + 1) as? UITextField {
-            
-            nextField.becomeFirstResponder()
-            
-        } else {
-            
-            textField.resignFirstResponder()
-            return true
-            
-        }
+   
         if (textField == firstNameTextField) {
             lastNameTextField.becomeFirstResponder()
             return true
@@ -199,13 +190,7 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
             return false
         
     }
-   
-    
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+  
 
 
 }
