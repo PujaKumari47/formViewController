@@ -92,10 +92,11 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
         
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        if (textField == sexTextField || textField == dobTextField || textField == weightTextField || textField == heightTextField) {
-        //self.containerView.addSubview(toolBar)
-        }
-            
+//        if (textField == sexTextField || textField == dobTextField || textField == weightTextField || textField == heightTextField) {
+//        //self.containerView.addSubview(toolBar)
+//        }
+        textField.inputAccessoryView = toolBar
+        
      
     }
     //Picker view delegate & dataSource methods
@@ -159,13 +160,13 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
 //        //self.toolBar.removeFromSuperview()
 //    }
 //    func previousPicker(sender:UIBarButtonItem) {
-//        if (firstNameTextField.superview?.viewWithTag(firstNameTextField.tag + 1) as? UITextField) != nil {
+//        if (lastNameTextField.superview?.viewWithTag(lastNameTextField.tag -1) as? UITextField) != nil {
 //            
-//           lastNameTextField.becomeFirstResponder()
+//           lastNameTextField.resignFirstResponder()
 //            
 //        } else {
 //            
-//            firstNameTextField.resignFirstResponder()
+//            firstNameTextField.becomeFirstResponder()
 //           
 //            
 //        }
@@ -183,11 +184,11 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
    
-        if (textField == firstNameTextField) {
-            lastNameTextField.becomeFirstResponder()
+//        if (textField == firstNameTextField) {
+//            lastNameTextField.becomeFirstResponder()
+//            return true
+//        }
             return true
-        }
-            return false
         
     }
   
