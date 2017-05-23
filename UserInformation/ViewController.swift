@@ -24,7 +24,7 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
     var sexPickerView:UIPickerView!
     var heightPickerView:UIPickerView!
     var weightPickerView:UIPickerView!
-    var toolBar: UIToolbar!
+    
     
     var sex :[String]  = ["Male","Female","Other"]
     var height:[String] = ["165Cm","166Cm","167Cm","168Cm","169Cm","170Cm"]
@@ -40,19 +40,6 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
         heightPickerView.backgroundColor = UIColor.clear
         weightPickerView = UIPickerView(frame: CGRect(x: 0, y:667-216, width: 375, height: 216))
         weightPickerView.backgroundColor = UIColor.clear
-//        toolBar = UIToolbar()
-//        toolBar = UIToolbar(frame: CGRect(x: 0, y: 667-246, width: 375, height:30))
-//        toolBar.barStyle = UIBarStyle.default
-//        toolBar.backgroundColor = UIColor.clear
-//        toolBar.tintColor = UIColor.white
-//        toolBar.sizeToFit()
-//        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.flexibleSpace, target: nil, action: nil)
-//        let doneButton = UIBarButtonItem(title: "Done", style: UIBarButtonItemStyle.plain, target: self, action:#selector(ViewController.donePicker(sender:)))
-//        let nextButton = UIBarButtonItem(title: ">", style: UIBarButtonItemStyle.plain, target: self, action:#selector(ViewController.nextPicker(sender:)))
-//        let previousButton = UIBarButtonItem(title: "<", style: UIBarButtonItemStyle.plain, target: self, action:#selector(ViewController.previousPicker(sender:)))
-//        toolBar.setItems([spaceButton, doneButton,nextButton,previousButton], animated: false)
-//        toolBar.isUserInteractionEnabled = true
-      
         sexPickerView.dataSource = self
         sexPickerView.delegate = self
         heightPickerView.delegate = self
@@ -63,10 +50,6 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
         self.sexTextField.inputView = sexPickerView
         self.heightTextField.inputView = heightPickerView
         self.weightTextField.inputView = weightPickerView
-        
-      
-        
-      
         
         
     }
@@ -92,12 +75,7 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
         
     }
     func textFieldDidBeginEditing(_ textField: UITextField) {
-//        if (textField == sexTextField || textField == dobTextField || textField == weightTextField || textField == heightTextField) {
-//        //self.containerView.addSubview(toolBar)
-//        }
-        textField.inputAccessoryView = toolBar
-        
-     
+
     }
     //Picker view delegate & dataSource methods
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -138,42 +116,12 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
     }
  
     func donePicker(sender:UIBarButtonItem) {
-    
         self.sexPickerView.removeFromSuperview()
         self.dobPickerView.removeFromSuperview()
         self.heightPickerView.removeFromSuperview()
         self.weightPickerView.removeFromSuperview()
-        //self.toolBar.removeFromSuperview()
-    }
-//    func nextPicker(sender:UIBarButtonItem) {
-//        if (firstNameTextField.superview?.viewWithTag(firstNameTextField.tag + 1) as? UITextField) != nil {
-//            
-//            lastNameTextField.becomeFirstResponder()
-//            
-//        } else {
-//            
-//            firstNameTextField.resignFirstResponder()
-//            
-//        }
-//        
-//
-//        //self.toolBar.removeFromSuperview()
-//    }
-//    func previousPicker(sender:UIBarButtonItem) {
-//        if (lastNameTextField.superview?.viewWithTag(lastNameTextField.tag -1) as? UITextField) != nil {
-//            
-//           lastNameTextField.resignFirstResponder()
-//            
-//        } else {
-//            
-//            firstNameTextField.becomeFirstResponder()
-//           
-//            
-//        }
-//     
-//    }
-//    
-    
+        
+        }
     
     func datePickerValueChanged(sender:UIDatePicker) {
         let dateFormatter = DateFormatter()
@@ -184,10 +132,7 @@ class ViewController: UIViewController,UIScrollViewDelegate,UITextFieldDelegate,
     }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
    
-//        if (textField == firstNameTextField) {
-//            lastNameTextField.becomeFirstResponder()
-//            return true
-//        }
+       textField.resignFirstResponder()
             return true
         
     }
